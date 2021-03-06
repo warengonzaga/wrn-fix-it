@@ -1,3 +1,34 @@
+rem =============================
+rem WRN Fix IT - https://github.com/warengonzaga/wrn-fix-it#readme
+rem Your Windows companion toolset for fixing common issues
+rem Version: 1.0.0-rc.1
+rem Github: https://github.com/warengonzaga/wrn-fix-it
+rem Licensed under GPL v3 - https://opensource.org/licenses/GPL-3.0
+rem Copyright (c) 2021 Waren Gonzaga
+rem 
+rem Facebook: @warengonzagaofficial
+rem Twitter: @warengonzaga
+rem Github: @warengonzaga
+rem Website: warengonzaga.com
+rem 
+rem Donate or Support!
+rem https://buymeacoff.ee/warengonzaga
+rem =============================
+
+cls
+@echo off
+rem =============================
+rem Setup Variables
+rem =============================
+set appname=WRN Fix IT
+set appvers=1.0.0-rc.1
+set appstat=Release Candidate
+set dev=Waren Gonzaga
+set desc=Your Windows companion toolset for fixing common issues
+set uicolor=a
+set infouicolor=b
+set erruicolor=c
+set cliname=$%appname%
 set divider======================================
 title %appname% v%appvers% - %appstat%
 
