@@ -17,24 +17,14 @@ const path = {
 };
 
 // white label & copyright label
-const whtlbl = JSON.parse(fs.readFileSync(path.source+'/config.json'));
+const conf = JSON.parse(fs.readFileSync(path.source+'/config.json'));
 const pkg = JSON.parse(fs.readFileSync('package.json'));
-const whtlbldata = {
-  whtlblbanner: [
-    'cls',
-    '@echo off',
-    'REM =============================',
-    'REM Setup Variables',
-    'REM =============================',
-    'set appname=<%= title %>',
-    'set appvers=<%= version %>',
-    'set appstat=<%= status %>',
-    'set dev=<%= dev %>',
-    'set desc=<%= description %>',
+const tooldata = {
+  vars: [
     'set uicolor=<%= uicolor %>',
     'set infouicolor=<%= infouicolor %>',
     'set erruicolor=<%= erruicolor %>',
-    'set cliN=$%appname%Cleaner\n',
+    'set cliN=$%appname%\n',
   ].join('\n'),
 }
 const copydata = {
@@ -44,7 +34,7 @@ const copydata = {
     'REM <%= description %>',
     'REM Version: <%= version %>',
     'REM Github: <%= github %>',
-    'REM Licensed Under General Public License v3 - https://opensource.org/licenses/GPL-3.0',
+    'REM Licensed under GPL v3 - https://opensource.org/licenses/GPL-3.0',
     'REM Copyright (c) <%= new Date().getFullYear() %> <%= author %>',
     'REM ',
     'REM Facebook: @warengonzagaofficial',
@@ -54,7 +44,17 @@ const copydata = {
     'REM ',
     'REM Donate or Support!',
     'REM https://buymeacoff.ee/warengonzaga',
-    'REM =============================\n\n',
+    'REM =============================\n',
+    'cls',
+    '@echo off',
+    'REM =============================',
+    'REM Setup Variables',
+    'REM =============================',
+    'set appname=<%= appname %>',
+    'set appvers=<%= version %>',
+    'set appstat=<%= status %>',
+    'set dev=<%= author %>',
+    'set desc=<%= description %>\n',
   ].join('\n'),
 };
 
@@ -64,10 +64,10 @@ const copydata = {
  */
 
 // add white label
-function whitelabel() {
+function setup() {
   return gulp
     .src([path.source+'/core.bat'], {allowEmpty: true})
-    .pipe(header(whtlbldata.whtlblbanner, whtlbl))
+    .pipe(header(tooldata.vars, conf))
     .pipe(gulp.dest([path.build]));
 }
 
@@ -76,7 +76,7 @@ function copyright() {
   return gulp
     .src([path.build+'/core.bat'], {allowEmpty: true})
     .pipe(header(copydata.copybanner, pkg))
-    .pipe(rename(whtlbl.filename+'-'+whtlbl.version+'.bat'))
+    .pipe(rename(conf.filename+'-'+pkg.version+'.bat'))
     .pipe(gulp.dest([path.build]));
 }
 
@@ -109,11 +109,11 @@ function cleanroot() {
 }
 
 // gulp series
-const build = gulp.series([whitelabel, copyright, delcore, copytoroot]);
+const build = gulp.series([setup, copyright, delcore, copytoroot]);
 const cleandev = gulp.series([cleanprod, cleanroot]);
 
 // gulp commands
-exports.whitelabel = whitelabel;
+exports.setup = setup;
 exports.copyright = copyright;
 exports.delcore = delcore;
 exports.copytoroot = copytoroot;

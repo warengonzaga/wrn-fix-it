@@ -1,8 +1,5 @@
-REM =============================
-REM Setup & Variables
-REM =============================
 set divider======================================
-title %appname% %appvers% - %appstat%
+title %appname% v%appvers% - %appstat%
 
 REM =============================
 REM Admin Permission Checker
@@ -27,7 +24,7 @@ goto mainMenu
 cls
 color %erruicolor%
 echo # %divider%
-echo # %appname% %appvers% - %appstat%
+echo # %appname% v%appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 echo #
@@ -50,7 +47,7 @@ REM =============================
 :mainMenu
 cls
 echo # %divider%
-echo # %appname% %appvers% - %appstat%
+echo # %appname% v%appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 color %uicolor%
@@ -69,9 +66,9 @@ REM Error 1 Message Screen
 REM =============================
 :errMes01
 cls
-title %appname% %appvers% - %appstat% [ERROR]
+title %appname% v%appvers% - %appstat% [ERROR]
 echo # %divider%
-echo # %appname% %appvers% - %appstat%
+echo # %appname% v%appvers% - %appstat%
 echo # by %dev%
 echo # %divider%
 color %erruicolor%

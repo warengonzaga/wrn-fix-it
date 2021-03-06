@@ -1,10 +1,5 @@
 {
     "filename":"wrn-fix-it",
-    "title":"WRN",
-    "version":"1.0.0-rc.1",
-    "status":"Release Candidate",
-    "dev":"Waren Gonzaga",
-    "description":"Your Windows companion toolset for fixing common technical issues.",
     "uicolor":"a",
     "infouicolor":"b",
     "erruicolor":"c"
