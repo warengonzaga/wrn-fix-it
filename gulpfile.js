@@ -83,7 +83,7 @@ function copyright() {
 // delete temporary build
 function delcore() {
   return gulp
-    .src(path.build+'/core.bat', {read: false})
+    .src(path.build+'/core.bat', {read: false, allowEmpty: true})
     .pipe(clean());
 }
 
@@ -97,14 +97,14 @@ function copytoroot() {
 // clean production folder
 function cleanprod() {
   return gulp
-    .src('./prod')
+    .src('./prod', {read: false, allowEmpty: true})
     .pipe(clean());
 }
 
 // clean existing builds
 function cleanroot() {
   return gulp
-    .src('./*.bat')
+    .src('./*.bat', {read: false, allowEmpty: true})
     .pipe(clean());
 }
 
