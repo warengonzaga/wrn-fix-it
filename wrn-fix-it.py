@@ -8,26 +8,90 @@ dev = "Waren Gonzaga"
 desc = "Your companion toolset for fixing common issues"
 divider = "======================================"
 
+def t001_1(t001_d0 = 1, t001_d1 = None, t001_d2 = None):
+    pass
+
 def t001():
-    # TODO: t001
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
     print(f"# {divider}")
     print( "#")
-    print(" # Default / DHCP ............. [0]")
-    print(" # Google DNS ................. [1]")
-    print(" # Cloudflare DNS ............. [2]")
-    print(" # Freenome DNS ............... [3]")
-    print(" # Comodo DNS ................. [4]")
-    print(" # Quad9 DNS .................. [5]")
-    print(" # Verisign DNS ............... [6]")
-    print(" # OpenDNS .................... [7]")
-    print(" # Back ....................... [8] (enter)")
-    print(" #")
+    print( "# Default / DHCP ............. [0]")
+    print( "# Google DNS ................. [1]")
+    print( "# Cloudflare DNS ............. [2]")
+    print( "# Freenome DNS ............... [3]")
+    print( "# Comodo DNS ................. [4]")
+    print( "# Quad9 DNS .................. [5]")
+    print( "# Verisign DNS ............... [6]")
+    print( "# OpenDNS .................... [7]")
+    print( "# Back ....................... [8] (enter)")
+    print( "#")
 
     while True:
         user_input = input("t001_option=# > ")
+
+        if user_input == "0":
+            # Default / DHCP
+            t001_d0 = "1"
+            t001_1()
+            break
+        elif user_input == "1":
+            # Google Public DNS
+            t001_d0 = "0"
+            t001_d1 = "8.8.8.8"
+            t001_d2 = "8.8.4.4"
+            t001_1(t001_d0, t001_d1, t001_d2)
+            break
+        elif user_input == "2":
+            # Cloudflare DNS
+            t001_d0 = "0"
+            t001_d1 = ""
+            t001_d2 = ""
+            t001_1(t001_d0, t001_d1, t001_d2)
+            break
+        elif user_input == "3":
+            # Freenom DNS
+            t001_d0 = "0"
+            t001_d1 = ""
+            t001_d2 = ""
+            t001_1(t001_d0, t001_d1, t001_d2)
+            break
+        elif user_input == "4":
+            # Comodo Secure DNS
+            t001_d0 = "0"
+            t001_d1 = ""
+            t001_d2 = ""
+            t001_1(t001_d0, t001_d1, t001_d2)
+            break
+        elif user_input == "5":
+            # Quad9 DNS
+            t001_d0 = "0"
+            t001_d1 = ""
+            t001_d2 = ""
+            t001_1(t001_d0, t001_d1, t001_d2)
+            break
+        elif user_input == "6":
+            # Verisign DNS
+            t001_d0 = "0"
+            t001_d1 = ""
+            t001_d2 = ""
+            t001_1(t001_d0, t001_d1, t001_d2)
+            break
+        elif user_input == "7":
+            # OpenDNS
+            t001_d0 = "0"
+            t001_d1 = ""
+            t001_d2 = ""
+            t001_1(t001_d0, t001_d1, t001_d2)
+            break
+        elif user_input == "8":
+            tools_menu()
+            break
+        else:
+            print("Invalid input. Please try again.")
+            continue
+
 
 def tools_menu():
 
@@ -69,6 +133,8 @@ def donate():
     pass
 
 def main_menu():
+    # TODO: Add color to terminal outputs with Colorama
+
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
