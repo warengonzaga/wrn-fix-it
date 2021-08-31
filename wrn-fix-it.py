@@ -8,11 +8,21 @@ dev = "Waren Gonzaga"
 desc = "Your companion toolset for fixing common issues"
 divider = "======================================"
 
+def clear():
+    # Terminal command for clearing screen varies depending
+    # on the operating system
+    if name == "nt":
+        system("cls")
+    else:
+        system("clear")
+
 def t001_1(t001_d0 = 1, t001_d1 = None, t001_d2 = None):
     # TODO
     pass
 
 def t001():
+
+    clear()
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
@@ -96,13 +106,7 @@ def t001():
 
 def tools_menu():
 
-    # Terminal command for clearing screen varies depending
-    # on the operating system
-    if name == "nt":
-        system("cls")
-    else:
-        system("clear")
-
+    clear()
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
@@ -136,6 +140,7 @@ def donate():
 def main_menu():
     # TODO: Add color to terminal outputs with Colorama
 
+    clear()
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
