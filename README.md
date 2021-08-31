@@ -17,6 +17,10 @@ Your Windows companion toolset for fixing common technical issues. This will hel
     - Google DNS
     - Cloudflare DNS
     - Freenom DNS
+    - Comodo DNS (New)
+    - Quad9 DNS (New)
+    - Verisign DNS (New)
+    - OpenDNS (New)
     - Custom (coming soon)
   - More tools
 - Modules (coming soon)
