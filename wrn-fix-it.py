@@ -18,6 +18,16 @@ def clear():
 
 def err3():
     print("Error 3")
+    print(f"# {divider}")
+    print(f"# {appname} v{appvers} - {appstat}")
+    print(f"# by {dev}")
+    print(f"# {divider}")
+    print(f"# The selected network doesn't exist!")
+    print(f"# Keep in mind that the network names are case sensitive.")
+    print(f"# {divider}")
+    print(f"#")
+    print(f"# Press enter to continue...")
+    input()
     main_menu()
 
 def t001_1_windows(t001_d0, t001_d1, t001_d2):
@@ -45,11 +55,29 @@ def t001_1_windows(t001_d0, t001_d1, t001_d2):
     else:
         err3()
 
+    clear()
+    print(f"# {divider}")
+    print(f"# {appname} v{appvers} - {appstat}")
+    print(f"# by {dev}")
+    print(f"# {divider}")
+    print(f"#")
+    print(f"# DNS server successfully changed!")
+    print(f"#")
+    print(f"# {divider}")
+    print(f"#")
+    print(f"# Press enter to continue...")
+    input()
+
+    tools_menu()
+
+
 def t001_1_linux(t001_d0, t001_d1, t001_d2):
+    print("Testing 111111")
     pass
 
 def t001_1(t001_d0 = 1, t001_d1 = None, t001_d2 = None):
-    # TODO: Check if functioning with macOS
+    # TODO: Check if functioning with macOS and implement
+    #       macOS support
 
     # Different function for windows and linux
     if name == "nt":
