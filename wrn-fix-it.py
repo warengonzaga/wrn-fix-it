@@ -8,14 +8,45 @@ dev = "Waren Gonzaga"
 desc = "Your companion toolset for fixing common issues"
 divider = "======================================"
 
+def t001():
+    # TODO: t001
+    pass
+
 def tools_menu():
-    print("TODO: Tools menu")
+    if name == "nt":
+        system("cls")
+    else:
+        system("clear")
+
+    print(f"# {divider}")
+    print(f"# {appname} v{appvers} - {appstat}")
+    print(f"# by {dev}")
+    print(f"# {divider}")
+    print( "#")
+    print( "# DNS Server Changer ......... [1]")
+    print( "# Back to Main Menu .......... [2] (enter)")
+    print( "#")
+
+    while True:
+        user_input = input("toolsMenu=# > ")
+
+        if user_input == "1":
+            t001()
+            break
+        elif user_input == "2":
+            main_menu()
+            break
+        else:
+            print("Invalid input. Please try again.")
+            continue
 
 def modules_menu():
-    print("TODO: Modules menu")
+    # TODO: Modules menu
+    pass
 
 def donate():
-    print("TODO: Donate menu")
+    # TODO: Donate menu
+    pass
 
 def main_menu():
     print(f"# {divider}")
@@ -24,12 +55,12 @@ def main_menu():
     print(f"# {divider}")
     print(f"# {desc}")
     print(f"# {divider}")
-    print("#")
-    print("# Tools ...................... [1] (enter)")
-    print("# Modules .................... [2] (coming soon)")
-    print("# Donate ..................... [3]")
-    print("# Exit ....................... [4]")
-    print("#")
+    print( "#")
+    print( "# Tools ...................... [1] (enter)")
+    print( "# Modules .................... [2] (coming soon)")
+    print( "# Donate ..................... [3]")
+    print( "# Exit ....................... [4]")
+    print( "#")
 
     while True:
         user_input = input("mainMenu=# > ")
@@ -46,7 +77,7 @@ def main_menu():
         elif user_input == "4":
             sys.exit()
         else:
-            print("Invalid input. Try again.")
+            print("Invalid input. Please try again.")
             continue
 
 def main():
