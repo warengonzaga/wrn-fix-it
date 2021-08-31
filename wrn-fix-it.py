@@ -72,8 +72,13 @@ def t001_1_windows(t001_d0, t001_d1, t001_d2):
 
 
 def t001_1_linux(t001_d0, t001_d1, t001_d2):
-    print("Testing 111111")
-    pass
+    # TODO: Add Linux support
+
+    clear()
+    print("Linux support is yet to be implemented.")
+    print("Press enter to continue...")
+    input()
+    main_menu()
 
 def t001_1(t001_d0 = 1, t001_d1 = None, t001_d2 = None):
     # TODO: Check if functioning with macOS and implement
