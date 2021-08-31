@@ -130,6 +130,7 @@ def tools_menu():
             continue
 
 def modules_menu():
+
     clear()
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
@@ -152,7 +153,8 @@ def launch(url):
         system(f"xdg-open {url}")
 
 def donate():
-    # TODO: Donate menu
+
+    clear()
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
