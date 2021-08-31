@@ -10,9 +10,29 @@ divider = "======================================"
 
 def t001():
     # TODO: t001
-    pass
+    print(f"# {divider}")
+    print(f"# {appname} v{appvers} - {appstat}")
+    print(f"# by {dev}")
+    print(f"# {divider}")
+    print( "#")
+    print(" # Default / DHCP ............. [0]")
+    print(" # Google DNS ................. [1]")
+    print(" # Cloudflare DNS ............. [2]")
+    print(" # Freenome DNS ............... [3]")
+    print(" # Comodo DNS ................. [4]")
+    print(" # Quad9 DNS .................. [5]")
+    print(" # Verisign DNS ............... [6]")
+    print(" # OpenDNS .................... [7]")
+    print(" # Back ....................... [8] (enter)")
+    print(" #")
+
+    while True:
+        user_input = input("t001_option=# > ")
 
 def tools_menu():
+
+    # Terminal command for clearing screen varies depending
+    # on the operating system
     if name == "nt":
         system("cls")
     else:
