@@ -142,9 +142,46 @@ def modules_menu():
     input()
     main_menu()
 
+def launch(url):
+    """Launch a website in the default browser
+       given a URL."""
+
+    if name == "nt":
+        system(f"start {url}")
+    elif name == "posix":
+        system(f"xdg-open {url}")
+
 def donate():
     # TODO: Donate menu
-    pass
+    print(f"# {divider}")
+    print(f"# {appname} v{appvers} - {appstat}")
+    print(f"# by {dev}")
+    print(f"# {divider}")
+    print(f"# Donate and Support")
+    print(f"# {divider}")
+    print(f"# ")
+    print("# Do you like this tool?") 
+    print("# Please consider to buy me a coffee or")
+    print("# just donate to keep this project alive.")
+    print("#")
+    print("# Buy Me A Coffee ............ [1]")
+    print("# PayPal ..................... [2]")
+    print("# Back to Main Menu .......... [3] (enter)")
+    print("#")
+
+    while True:
+        user_input = input("donate=# > ")
+        if user_input == "1":
+            launch("https://buymeacoff.ee/warengonzaga")
+            break
+        elif user_input == "2":
+            launch("https://paypal.me/warengonzagaofficial")
+            break
+        elif user_input == "3":
+            main_menu()
+        else:
+            print("Invalid input. Please try again.")
+
 
 def main_menu():
     # TODO: Add color to terminal outputs with Colorama
