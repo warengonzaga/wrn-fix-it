@@ -130,8 +130,17 @@ def tools_menu():
             continue
 
 def modules_menu():
-    # TODO: Modules menu
-    pass
+    clear()
+    print(f"# {divider}")
+    print(f"# {appname} v{appvers} - {appstat}")
+    print(f"# by {dev}")
+    print(f"# {divider}")
+    print(f"# Currently not available!") 
+    print(f"# {divider}")
+    print( "#")
+    print( "# Press Enter to continue...")
+    input()
+    main_menu()
 
 def donate():
     # TODO: Donate menu
