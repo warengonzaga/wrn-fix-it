@@ -16,9 +16,20 @@ def clear():
     else:
         system("clear")
 
-def t001_1(t001_d0 = 1, t001_d1 = None, t001_d2 = None):
-    # TODO
+def t001_1_windows(t001_d0, t001_d1, t001_d2):
     pass
+
+def t001_1_linux(t001_d0, t001_d1, t001_d2):
+    pass
+
+def t001_1(t001_d0 = 1, t001_d1 = None, t001_d2 = None):
+    # TODO: Check if functioning with macOS
+
+    # Different function for windows and linux
+    if name == "nt":
+        t001_1_windows(t001_d0, t001_d1, t001_d2)
+    else:
+        t001_1_linux(t001_d0, t001_d1, t001_d2)
 
 def t001():
 
