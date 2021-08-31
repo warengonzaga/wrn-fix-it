@@ -228,9 +228,9 @@ ${header}
 "
     read -p "# $ WRN Fix IT> " donate_choice
     if [ $donate_choice == "1" ]; then
-        xdg-open "https://www.buymeacoffee.com/warengonzaga"
+        xdg-open "https://wrngnz.ga/bmc"
     elif [ $donate_choice == "2" ]; then
-        xdg-open "https://www.paypal.com/paypalme/warengonzagaofficial"
+        xdg-open "https://wrngnz.ga/paypal"
     elif [ $donate_choice == "3" ]; then
         menu
     else
