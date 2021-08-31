@@ -9,6 +9,7 @@ desc = "Your companion toolset for fixing common issues"
 divider = "======================================"
 
 def t001_1(t001_d0 = 1, t001_d1 = None, t001_d2 = None):
+    # TODO
     pass
 
 def t001():
@@ -46,43 +47,43 @@ def t001():
         elif user_input == "2":
             # Cloudflare DNS
             t001_d0 = "0"
-            t001_d1 = ""
-            t001_d2 = ""
+            t001_d1 = "1.1.1.1"
+            t001_d2 = "1.0.0.1"
             t001_1(t001_d0, t001_d1, t001_d2)
             break
         elif user_input == "3":
             # Freenom DNS
             t001_d0 = "0"
-            t001_d1 = ""
-            t001_d2 = ""
+            t001_d1 = "80.80.80.80"
+            t001_d2 = "80.80.81.81"
             t001_1(t001_d0, t001_d1, t001_d2)
             break
         elif user_input == "4":
             # Comodo Secure DNS
             t001_d0 = "0"
-            t001_d1 = ""
-            t001_d2 = ""
+            t001_d1 = "8.26.56.26"
+            t001_d2 = "8.20.247.20"
             t001_1(t001_d0, t001_d1, t001_d2)
             break
         elif user_input == "5":
             # Quad9 DNS
             t001_d0 = "0"
-            t001_d1 = ""
-            t001_d2 = ""
+            t001_d1 = "9.9.9.9"
+            t001_d2 = "149.112.112.112"
             t001_1(t001_d0, t001_d1, t001_d2)
             break
         elif user_input == "6":
             # Verisign DNS
             t001_d0 = "0"
-            t001_d1 = ""
-            t001_d2 = ""
+            t001_d1 = "64.6.64.6"
+            t001_d2 = "64.6.65.7"
             t001_1(t001_d0, t001_d1, t001_d2)
             break
         elif user_input == "7":
             # OpenDNS
             t001_d0 = "0"
-            t001_d1 = ""
-            t001_d2 = ""
+            t001_d1 = "208.67.222.222"
+            t001_d2 = "208.67.220.220"
             t001_1(t001_d0, t001_d1, t001_d2)
             break
         elif user_input == "8":
