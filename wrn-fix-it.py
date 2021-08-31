@@ -16,8 +16,34 @@ def clear():
     else:
         system("clear")
 
+def err3():
+    print("Error 3")
+    main_menu()
+
 def t001_1_windows(t001_d0, t001_d1, t001_d2):
-    pass
+
+    clear()
+    print(f"# {divider}")
+    print(f"# {appname} v{appvers} - {appstat}")
+    print(f"# by {dev}")
+    print(f"# {divider}")
+    print( "# Select the network you want to change the DNS server of.")
+    print( "# Note: Interface names are case-sensitive.")
+    print( "# {divider}")
+    system("netsh interface ip show config")
+    print( "# {divider}")
+    print( "#")
+    t001_2_option = input("t001_2_option= > ")
+    print( "#")
+    print( "# Updating ...")
+    errorlevel = system(f'netsh interface ip set dnsservers "{t001_2_option}" dhcp') 
+
+    if errorlevel != 1:
+        if t001_d0 == 0:
+            system(f'netsh interface ip set dnsservers "{t001_2_option}" static {t001_d1} primary')
+            system(f'netsh interface ip add dnsservers "{t001_2_option}" {t001_d2} index=2')
+    else:
+        err3()
 
 def t001_1_linux(t001_d0, t001_d1, t001_d2):
     pass
