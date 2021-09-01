@@ -33,6 +33,8 @@ def err3():
     main_menu()
 
 def t001_1_windows(t001_d0, t001_d1, t001_d2):
+    """Change DNS servers on Windows
+    """
 
     clear()
     print(f"# {divider}")
@@ -74,15 +76,49 @@ def t001_1_windows(t001_d0, t001_d1, t001_d2):
 
 
 def t001_1_linux(t001_d0, t001_d1, t001_d2):
-    # TODO: Add Linux support
+    """Change DNS servers on Linux
+    """
 
     clear()
-    print("Linux support is yet to be implemented.")
-    print("Press enter to continue...")
-    input()
-    main_menu()
+    print(f"# {divider}")
+    print(f"# {appname} v{appvers} - {appstat}")
+    print(f"# by {dev}")
+    print(f"# {divider}")
+    print(f"# Updating DNS servers..") 
+    print(f"#") 
+    
+    # Check if resolv.conf.bak exists
+    if system("[ -f /etc/resolv.conf.bak ]") == 0:
+        backup_exists = True
+    else:
+        backup_exists = False
 
-def t001_1(t001_d0 = 1, t001_d1 = None, t001_d2 = None):
+    # Default config
+    if t001_d0 == "1":
+        if backup_exists:
+            system("mv /etc/resolv.conf.bak /etc/resolv.conf")
+            print(f"# DNS server successfully changed!")
+        else:
+            print("# [!] Backup file for resolv.conf not found. You may not have changed the DNS server yet using this tool.")
+
+    # Other DNS configs
+    else:
+        if not backup_exists:
+            system("mv /etc/resolv.conf /etc/resolv.conf.bak")
+
+        system(f'echo "nameserver {t001_d1}" > /etc/resolv.conf')
+        system(f'echo "nameserver {t001_d2}" >> /etc/resolv.conf')
+        print(f"# DNS server successfully changed!")
+
+    print(f"#")
+    print(f"# {divider}")
+    print(f"#")
+    print(f"# Press enter to continue...")
+    input()
+
+    tools_menu()
+
+def t001_1(t001_d0 = "1", t001_d1 = None, t001_d2 = None):
     # TODO: Check if functioning with macOS and implement
     #       macOS support
 
@@ -277,7 +313,7 @@ def main_menu():
     while True:
         user_input = input("mainMenu=# > ")
     
-        if user_input == "1":
+        if user_input == "1" or user_input == "":
             tools_menu()
             break
         elif user_input == "2":
