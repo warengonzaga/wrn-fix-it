@@ -27,7 +27,8 @@ The complete documentation can be found here:<br/>
     - Quad9 DNS (New)
     - Verisign DNS (New)
     - OpenDNS (New)
-    - Custom (coming soon)
+    - AdGuard (New)
+    - Custom (New)
   - More tools
 - Modules (coming soon)
   - More modules
@@ -44,9 +45,13 @@ Download the repository and look for **``"wrn-fix-it-vX.X.X.bat"``** file and ru
 
 Contributions are welcome, create a pull request to this repo and I will review your code. Please consider to submit your pull request to the ```dev``` branch. Thank you!
 
+## 💬 Discussions
+
+For any questions, suggestions, ideas, or simply you want to share your experience in using this project, feel free to share and discuss it to the [community](https://github.com/warengonzaga/wrn-fix-it/discussions)!
+
 ## 🐛 Issues
 
-If you're facing a problem in using WRN Fix IT please let us know by [creating an issue here](https://github.com/warengonzaga/wrn-fix-it/issues/new). I'm happy to help you! Don't forget to provide me some screenshot or error codes of it, thank you!
+If you're facing a problem in using WRN Fix IT please let me know by [creating an issue here](https://github.com/warengonzaga/wrn-fix-it/issues/new). I'm here to help you!
 
 ## 🍀 Sponsors and Supporters
 
