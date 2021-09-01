@@ -100,7 +100,7 @@ def t001_1_linux(t001_d0, t001_d1, t001_d2):
             system("mv /etc/resolv.conf.bak /etc/resolv.conf")
             print(f"# DNS server successfully changed!")
         else:
-            print("# [!] Backup file for resolv.conf not found. You may not have changed the DNS server yet using this tool.")
+            print("# [!] Backup file for resolv.conf not found. This is probably because you haven't changed your DNS servers yet with this tool, or you are currently using your default domain.")
 
     # Other DNS configs
     else:
