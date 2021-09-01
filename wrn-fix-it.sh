@@ -197,11 +197,7 @@ set_custom_dns() {
         mv /etc/resolv.conf /etc/resolv.conf.bak
     fi
     echo "nameserver $custom_dns1" > /etc/resolv.conf
-    if [[ -z "$custom_dns2" ]]; then
-        :
-    else
-        echo "nameserver $custom_dns2" >> /etc/resolv.conf
-    fi
+    echo "nameserver $custom_dns2" >> /etc/resolv.conf
     clear
     printf "${GREEN}
 ${header}
@@ -261,7 +257,7 @@ custom_dns_input() {
 ${header}
 #
 # Custom DNS
-# If don't have a second DNS Server just press (enter)
+# Custom DNS, Requires 2 DNS Servers
 #
 "
     clear
