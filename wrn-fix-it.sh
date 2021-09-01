@@ -197,11 +197,7 @@ set_custom_dns() {
         mv /etc/resolv.conf /etc/resolv.conf.bak
     fi
     echo "nameserver $custom_dns1" > /etc/resolv.conf
-    if [[ -z "$custom_dns2" ]]; then
-        :
-    else
-        echo "nameserver $custom_dns2" >> /etc/resolv.conf
-    fi
+    echo "nameserver $custom_dns2" >> /etc/resolv.conf
     clear
     printf "${GREEN}
 ${header}
@@ -261,27 +257,43 @@ custom_dns_input() {
 ${header}
 #
 # Custom DNS
-# If don't have a second DNS Server just press (enter)
+# Custom DNS, Requires 2 DNS Servers
 #
 "
     clear
     read -p "# $ WRN Fix IT(1st DNS)>" custom_dns1
-    printf "${GREEN}
+    if [[ $custom_dns1 =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+        printf "${GREEN}
 ${header}
 #
 # DNS Server 1: $custom_dns1
 # DNS Server 2:
 #
-"
+"   
+    else
+        clear
+        printf "${RED}[!] ERROR Cannot Add DNS, Please Check your DNS Server\n"
+        printf "${CYAN}[!] DNS Input: ${custom_dns1}"
+        sleep 5
+        menu
+    fi
     clear
     read -p "# $ WRN Fix IT(2nd DNS)>" custom_dns2
-    printf "${GREEN}
+    if [[ $custom_dns2 =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+        printf "${GREEN}
 ${header}
 #
 # DNS Server 1: $custom_dns1
 # DNS Server 2: $custom_dns2
 #
 "
+    else
+        clear
+        printf "${RED}[!] ERROR Cannot Add DNS, Please Check your DNS Server\n"
+        printf "${CYAN}[!] DNS Input:  ${custom_dns2}"
+        sleep 5
+        menu
+    fi
     set_custom_dns
 }
 
