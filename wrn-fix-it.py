@@ -156,6 +156,8 @@ def t001():
     print(f"# Back ....................... [10] (enter)")
     print(f"#")
 
+    # TODO: This whole input wall could be refactored.
+
     while True:
         user_input = input("t001_option=# > ")
 
@@ -215,7 +217,49 @@ def t001():
             break
         elif user_input == "8":
             # AdGuard DNS
-            pass
+            clear()
+            print(f"# {divider}")
+            print(f"# {appname} v{appvers} - {appstat}")
+            print(f"# by {dev}")
+            print(f"# {divider}")
+            print(f"#")
+            print(f"# Select your AdGuard DNS of choice.")
+            print(f"#")
+            print(f"# AdGuard (Default) .......... [1]")
+            print(f"# AdGuard (Family) ........... [2]")
+            print(f"# AdGuard (Non-Filtering) .... [3]")
+            print(f"# Back ....................... [4] Enter")
+            print(f"#")
+
+            while True:
+                user_input = input("adGuardMenu=# > ")
+
+                t001_d0 = "0"
+                if user_input == "1":
+                    # AdGuard (Default)
+                    t001_d1 = "94.140.14.14"
+                    t001_d2 = "94.140.15.15"
+                    t001_1(t001_d0, t001_d1, t001_d2)
+                    break
+                elif user_input == "2":
+                    # AdGuard (Family)
+                    t001_d1 = "94.140.14.15"
+                    t001_d2 = "94.140.15.16"
+                    t001_1(t001_d0, t001_d1, t001_d2)
+                    break
+                elif user_input == "3":
+                    # AdGuard (Non-Filtering)
+                    t001_d1 = "94.140.14.140"
+                    t001_d2 = "94.140.14.141"
+                    t001_1(t001_d0, t001_d1, t001_d2)
+                    break
+                elif user_input == "4" or user_input == "":
+                    t001()
+                else:
+                    print("Invalid input. Please try again.")
+                    continue
+            break
+
         elif user_input == "9":
             # Custom DNS
             pass
