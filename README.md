@@ -1,15 +1,21 @@
 # WRN Fix IT (Release Candidate)
 
-[![by Waren Gonzaga](https://img.shields.io/badge/by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://bmc.xyz/warengonzaga) ![Version](https://img.shields.io/github/release/WarenGonzaga/wrn-fix-it.svg?style=flat-square) ![Downloads](https://img.shields.io/github/downloads/warengonzaga/wrn-fix-it/total?style=flat-square) ![Stars](https://img.shields.io/github/stars/WarenGonzaga/wrn-fix-it.svg?style=flat-square) ![Size](https://img.shields.io/github/repo-size/warengonzaga/wrn-fix-it?color=green&style=flat-square) ![License](https://img.shields.io/github/license/WarenGonzaga/wrn-fix-it.svg?style=flat-square)
+[![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![Release](https://img.shields.io/github/release/warengonzaga/wrn-fix-it.svg?style=flat-square)](https://github.com/warengonzaga/wrn-fix-it/releases) [![Star](https://img.shields.io/github/stars/warengonzaga/wrn-fix-it.svg?style=flat-square)](https://github.com/warengonzaga/wrn-fix-it/stargazers) [![License](https://img.shields.io/github/license/warengonzaga/wrn-fix-it.svg?style=flat-square)](https://github.com/warengonzaga/wrn-fix-it/blob/main/LICENSE)
 
-Your Windows companion toolset for fixing common technical issues. This will help you to make your life easier in fixing most common issues with Windows based machine.
+Your open-source companion toolset for fixing common technical issues. This will help you to make your life easier in fixing most common issues with different operating systems.
 
-## Documentation
+## 😎 Demo
 
-> The complete documentation can be found here:
-> **[docs.warengonzaga.com/wrn-fix-it](https://docs.warengonzaga.com/wrn-fix-it)**
+(coming soon...)
 
-## Features
+## 📖 Documentation
+
+<!-- <!-- markdownlint-disable MD033 -->
+The complete documentation can be found here:<br/>
+[![Docs](https://img.shields.io/badge/Docs-docs.wareneutron.com/wrn--fix--it-blue.svg?longCache=true&style=for-the-badge)](https://docs.warengonzaga.com/wrn-fix-it)
+<!-- <!-- markdownlint-enable MD033 -->
+
+## ⚡ Features
 
 - Tools
   - DNS Server Changer
@@ -26,40 +32,61 @@ Your Windows companion toolset for fixing common technical issues. This will hel
 - Modules (coming soon)
   - More modules
 
-## Usage
+## 💻 Supported Systems
+
+- Windows 10 (batch)
+
+## 🕹️ Usage
 
 Download the repository and look for **``"wrn-fix-it-vX.X.X.bat"``** file and run ``*.bat`` file as administrator. All you have to do is to follow the on-screen instructions.
 
-## Contributing
+## 🎯 Contributing
 
 Contributions are welcome, create a pull request to this repo and I will review your code. Please consider to submit your pull request to the ```dev``` branch. Thank you!
 
-## Issues
+## 🐛 Issues
 
-If you're facing a problem in using WRN Fix IT please let me know by creating an issue in this github repository. I'm happy to help you! Don't forget to provide me some screenshot or error codes of it, thank you!
+If you're facing a problem in using WRN Fix IT please let us know by [creating an issue here](https://github.com/warengonzaga/wrn-fix-it/issues/new). I'm happy to help you! Don't forget to provide me some screenshot or error codes of it, thank you!
 
-## Supporters
+## 🍀 Sponsors and Supporters
 
-[![Vercel](https://wrngnz.ga/badge-vercel)](https://vercel.com) [![GitBook](https://wrngnz.ga/badge-gitbook)](https://gitbook.io)
+[![BuyMeaCoffee](https://wrngnz.ga/badge-buymeacoffee)](https://buymeacoff.ee/warengonzaga) [![Vercel](https://wrngnz.ga/badge-vercel)](https://vercel.com) [![CircleCI](https://wrngnz.ga/badge-circleci)](https://vercel.com) [![GitBook](https://wrngnz.ga/badge-gitbook)](https://gitbook.io) [![Digital Ocean](https://wrngnz.ga/badge-digitalocean)](https://digitalocean.com) [![Deepware](https://wrngnz.ga/badge-deepware)](https://deepware.ai/) [![NOWPayments](https://wrngnz.ga/badge-nowpayments)](https://nowpayments.io) [![StackHawk](https://img.shields.io/badge/Stackhawk-%2300CBC6.svg?&style=for-the-badge&logoColor=white)](https://stackhawk.com)
 
-and you... [buy me a coffee](https://bmc.xyz/warengonzaga) if you love what I do!
+<!-- markdownlint-disable MD033 -->
+> Love what I do? **[Send us some coffees](https://buymeacoff.ee/wareneutron)**!<br/>
+> Your coffee donation and support will help me to continue working on open-source projects like this.
+<!-- markdownlint-disable MD033 -->
 
-## Community
+## 🌏 Community
 
-Wanna see other projects I made? Join today!
+Wanna become one of us? Join today and contribute!
 
-[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner3)](https://wrngnz.ga/discord)
+[![Community](https://discordapp.com/api/guilds/694612151444439081/widget.png?style=banner3)](https://wareneutron.com/discord)
 
-## License
+Looking for community of Filipino tech enthusiasts?
+
+[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner2)](https://wrngnzga.com/discord)
+
+## 📋 Code of Conduct
+
+Read the project's [code of conduct](./code_of_conduct.md).
+
+## 📃 License
 
 WRN Fix IT is licensed under [GNU General Public License v3](https://opensource.org/licenses/GPL-3.0).
 
-## Author
+## 📝 Author
 
-WRN Fix IT is Developed and Maintained by **[Waren Gonzaga](https://github.com/warengonzaga)**
-
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white)](https://facebook.com/warengonzagaofficial) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?&style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/warengonzaga) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/warengonzagaofficial) [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?&style=flat-square&logo=youtube&logoColor=white)](https://youtube.com/warengonzaga) [![DEV](https://img.shields.io/badge/DEV-%23000000.svg?&style=flat-square&logo=dev.to&logoColor=white)](https://dev.to/warengonzaga) [![BMC](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-%23FFDD00.svg?&style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoff.ee/warengonzaga)
+WRN Fix IT is created by **[Waren Gonzaga](https://github.com/warengonzaga)**, with the help of awesome [contributors](https://github.com/wareneutron/covid19-tracker-cli/graphs/contributors).
 
 ---
 
-💻 Made with 💖 and ☕ by Waren Gonzaga with **YHWH** 🙏
+💻 Made with 💖 and ☕ by [Waren Gonzaga](https://warengonzaga.com) with **YHWH** 🙏 | Citizen of Heaven
+
+[personal website]: https://warengonzaga.com
+[business website]: https://wgcompanyhq.com
+[biolink]: https://bio.link/warengonzaga
+[facebook]: https://facebook.com/warengonzagaofficial
+[twitter]: https://twitter.com/warengonzaga
+[instagram]: https://instagram.com/warengonzagaofficial
+[youtube]: https://youtube.com/warengonzaga
