@@ -9,16 +9,20 @@ dev = "Waren Gonzaga"
 desc = "Your companion toolset for fixing common issues"
 divider = "======================================"
 
+
 def clear():
-    # Terminal command for clearing screen varies depending
-    # on the operating system
+    """Clear the screen.
+
+    Terminal command for clearing screen varies depending
+    on the operating system"""
     if name == "nt":
         system("cls")
     else:
         system("clear")
 
-def err3():
 
+def err3():
+    """Error when network doesn't exit"""
     clear()
     print("Error 3")
     print(f"# {divider}")
@@ -33,6 +37,7 @@ def err3():
     input()
     main_menu()
 
+
 def t001_1_windows(t001_d0, t001_d1, t001_d2):
     """Change DNS servers on Windows
     """
@@ -42,16 +47,16 @@ def t001_1_windows(t001_d0, t001_d1, t001_d2):
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
     print(f"# {divider}")
-    print( "# Select the network you want to change the DNS server of.")
-    print( "# Note: Interface names are case-sensitive.")
+    print(f"# Select the network you want to change the DNS server of.")
+    print(f"# Note: Interface names are case-sensitive.")
     print(f"# {divider}")
     system("netsh interface ip show config")
     print(f"# {divider}")
-    print( "#")
+    print(f"#")
     t001_2_option = input("t001_2_option= > ")
-    print( "#")
-    print( "# Updating ...")
-    errorlevel = system(f'netsh interface ip set dnsservers "{t001_2_option}" dhcp') 
+    print(f"#")
+    print(f"# Updating ...")
+    errorlevel = system(f'netsh interface ip set dnsservers "{t001_2_option}" dhcp')
 
     if errorlevel != 1:
         if t001_d0 == "0":
@@ -85,20 +90,17 @@ def t001_1_linux(t001_d0, t001_d1, t001_d2):
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
     print(f"# {divider}")
-    print(f"# Updating DNS servers..") 
-    print(f"#") 
-    
+    print(f"# Updating DNS servers..")
+    print(f"#")
+
     # Check if resolv.conf.bak exists
-    if system("[ -f /etc/resolv.conf.bak ]") == 0:
-        backup_exists = True
-    else:
-        backup_exists = False
+    backup_exists = system("[ -f /etc/resolv.conf.bak ]") == 0
 
     # Default config
     if t001_d0 == "1":
         if backup_exists:
             system("mv /etc/resolv.conf.bak /etc/resolv.conf")
-            print(f"# DNS server successfully changed!")
+            print("# DNS server successfully changed!")
         else:
             print("# [!] Backup file for resolv.conf not found. This is probably because you haven't changed your DNS servers yet with this tool, or you are currently using your default domain.")
 
@@ -119,9 +121,11 @@ def t001_1_linux(t001_d0, t001_d1, t001_d2):
 
     tools_menu()
 
+
 def t001_1(t001_d0 = "1", t001_d1 = None, t001_d2 = None):
-    # TODO: Check if functioning with macOS and implement
-    #       macOS support
+    """Redirect to the Windows, macOS or Linux DNS changer."""
+
+    # TODO: Implement macOS support
 
     # Different function for windows and linux
     if name == "nt":
@@ -129,24 +133,26 @@ def t001_1(t001_d0 = "1", t001_d1 = None, t001_d2 = None):
     else:
         t001_1_linux(t001_d0, t001_d1, t001_d2)
 
+
 def t001():
+    """Make the user select the DNS server to change into."""
 
     clear()
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
     print(f"# {divider}")
-    print( "#")
-    print( "# Default / DHCP ............. [0]")
-    print( "# Google DNS ................. [1]")
-    print( "# Cloudflare DNS ............. [2]")
-    print( "# Freenome DNS ............... [3]")
-    print( "# Comodo DNS ................. [4]")
-    print( "# Quad9 DNS .................. [5]")
-    print( "# Verisign DNS ............... [6]")
-    print( "# OpenDNS .................... [7]")
-    print( "# Back ....................... [8] (enter)")
-    print( "#")
+    print(f"#")
+    print(f"# Default / DHCP ............. [0]")
+    print(f"# Google DNS ................. [1]")
+    print(f"# Cloudflare DNS ............. [2]")
+    print(f"# Freenome DNS ............... [3]")
+    print(f"# Comodo DNS ................. [4]")
+    print(f"# Quad9 DNS .................. [5]")
+    print(f"# Verisign DNS ............... [6]")
+    print(f"# OpenDNS .................... [7]")
+    print(f"# Back ....................... [8] (enter)")
+    print(f"#")
 
     while True:
         user_input = input("t001_option=# > ")
@@ -214,16 +220,17 @@ def t001():
 
 
 def tools_menu():
+    """Select tools for configuring networks"""
 
     clear()
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
     print(f"# {divider}")
-    print( "#")
-    print( "# DNS Server Changer ......... [1]")
-    print( "# Back to Main Menu .......... [2] (enter)")
-    print( "#")
+    print(f"#")
+    print(f"# DNS Server Changer ......... [1]")
+    print(f"# Back to Main Menu .......... [2] (enter)")
+    print(f"#")
 
     while True:
         user_input = input("toolsMenu=# > ")
@@ -238,19 +245,22 @@ def tools_menu():
             print("Invalid input. Please try again.")
             continue
 
+
 def modules_menu():
+    """The modules menu, WIP"""
 
     clear()
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
     print(f"# by {dev}")
     print(f"# {divider}")
-    print(f"# Currently not available!") 
+    print(f"# Currently not available!")
     print(f"# {divider}")
-    print( "#")
-    print( "# Press Enter to continue...")
+    print(f"#")
+    print(f"# Press Enter to continue...")
     input()
     main_menu()
+
 
 def launch(url):
     """Launch a website in the default browser
@@ -261,7 +271,9 @@ def launch(url):
     elif name == "posix":
         system(f"xdg-open {url}")
 
+
 def donate():
+    """Links to donation sites"""
 
     clear()
     print(f"# {divider}")
@@ -271,7 +283,7 @@ def donate():
     print(f"# Donate and Support")
     print(f"# {divider}")
     print(f"# ")
-    print("# Do you like this tool?") 
+    print("# Do you like this tool?")
     print("# Please consider to buy me a coffee or")
     print("# just donate to keep this project alive.")
     print("#")
@@ -295,6 +307,8 @@ def donate():
 
 
 def main_menu():
+    """Main menu"""
+
     # TODO: Add color to terminal outputs with Colorama
 
     clear()
@@ -304,16 +318,16 @@ def main_menu():
     print(f"# {divider}")
     print(f"# {desc}")
     print(f"# {divider}")
-    print( "#")
-    print( "# Tools ...................... [1] (enter)")
-    print( "# Modules .................... [2] (coming soon)")
-    print( "# Donate ..................... [3]")
-    print( "# Exit ....................... [4]")
-    print( "#")
+    print(f"#")
+    print(f"# Tools ...................... [1] (enter)")
+    print(f"# Modules .................... [2] (coming soon)")
+    print(f"# Donate ..................... [3]")
+    print(f"# Exit ....................... [4]")
+    print(f"#")
 
     while True:
         user_input = input("mainMenu=# > ")
-    
+
         if user_input == "1" or user_input == "":
             tools_menu()
             break
@@ -329,6 +343,7 @@ def main_menu():
             print("Invalid input. Please try again.")
             continue
 
+
 def is_admin():
     """Return True if the program has admin privileges"""
 
@@ -339,6 +354,7 @@ def is_admin():
     # Linux
     else:
         return system('[ "$EUID" == 0 ]') == 0
+
 
 def main():
     if not is_admin():
