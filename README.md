@@ -27,7 +27,8 @@ The complete documentation can be found here:<br/>
     - Quad9 DNS (New)
     - Verisign DNS (New)
     - OpenDNS (New)
-    - Custom (coming soon)
+    - AdGuard (New)
+    - Custom (New)
   - More tools
 - Modules (coming soon)
   - More modules
