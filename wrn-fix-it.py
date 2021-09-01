@@ -288,19 +288,15 @@ def donate():
     print("# just donate to keep this project alive.")
     print("#")
     print("# Buy Me A Coffee ............ [1]")
-    print("# PayPal ..................... [2]")
-    print("# Back to Main Menu .......... [3] (enter)")
+    print("# Back to Main Menu .......... [2] (enter)")
     print("#")
 
     while True:
         user_input = input("donate=# > ")
         if user_input == "1":
-            launch("https://buymeacoff.ee/warengonzaga")
+            launch("https://wrngnz.ga/bmc")
             break
-        elif user_input == "2":
-            launch("https://paypal.me/warengonzagaofficial")
-            break
-        elif user_input == "3":
+        elif user_input == "2" or user_input == "":
             main_menu()
         else:
             print("Invalid input. Please try again.")
