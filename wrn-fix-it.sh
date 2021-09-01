@@ -147,12 +147,75 @@ ${divider}
 cat /etc/resolv.conf
 }
 
+set_adguard() {
+    if [ -f /etc/resolv.conf ]; then
+        mv /etc/resolv.conf /etc/resolv.conf.bak
+    fi
+    echo "nameserver 94.140.14.14" > /etc/resolv.conf
+    echo "nameserver 94.140.15.15" >> /etc/resolv.conf
+    clear
+    printf "${GREEN}
+${header}
+DNS Name Servers set to AdGuard DNS
+${divider}
+"
+cat /etc/resolv.conf
+}
+
+set_adguard_family() {
+    if [ -f /etc/resolv.conf ]; then
+        mv /etc/resolv.conf /etc/resolv.conf.bak
+    fi
+    echo "nameserver 94.140.14.15" > /etc/resolv.conf
+    echo "nameserver 94.140.15.16" >> /etc/resolv.conf
+    clear
+    printf "${GREEN}
+${header}
+DNS Name Servers set to AdGuard Family Protection DNS
+${divider}
+"
+cat /etc/resolv.conf
+}
+
+set_adguard_non_filter() {
+    if [ -f /etc/resolv.conf ]; then
+        mv /etc/resolv.conf /etc/resolv.conf.bak
+    fi
+    echo "nameserver 94.140.14.140" > /etc/resolv.conf
+    echo "nameserver 94.140.14.141" >> /etc/resolv.conf
+    clear
+    printf "${GREEN}
+${header}
+DNS Name Servers set to AdGuard Non-Filtering DNS
+${divider}
+"
+cat /etc/resolv.conf
+}
+
+set_custom_dns() {
+    if [ -f /etc/resolv.conf ]; then
+        mv /etc/resolv.conf /etc/resolv.conf.bak
+    fi
+    echo "nameserver $custom_dns1" > /etc/resolv.conf
+    if [[ -z "$custom_dns2" ]]; then
+        :
+    else
+        echo "nameserver $custom_dns2" >> /etc/resolv.conf
+    fi
+    clear
+    printf "${GREEN}
+${header}
+DNS Name Servers set to your custom DNS
+${divider}
+"
+cat /etc/resolv.conf
+}
+
 # $option 1
 dns_settings() {
     clear
     printf "
 ${header}
-# =====================================
 #
 # DNS Server Changer ......... [1]
 # Back to Main Menu .......... [2] (enter)
@@ -168,11 +231,64 @@ ${header}
     fi
 }
 
+adguard_choice() {
+    printf "
+${header}
+#
+# Default .................... [0]
+# Family Protection .......... [1]
+# Non-Filtering .............. [2]
+# Back to DNS Server Changer . [3] (enter)
+#
+"
+    read -p "# $ WRN Fix IT> " adguard_choice
+    if [[ $adguard_choice == "0" ]]; then
+        set_adguard
+    elif [[ $adguard_choice == "1" ]]; then
+        set_adguard_family
+    elif [[ $adguard_choice == "2" ]]; then
+        set_adguard_non_filter
+    elif [[ $adguard_choice == "3" ]]; then
+        dns_settings
+    else
+        dns_settings
+    fi
+}
+
+custom_dns_input() {
+    clear
+    printf "${GREEN}
+${header}
+#
+# Custom DNS
+# If don't have a second DNS Server just press (enter)
+#
+"
+    clear
+    read -p "# $ WRN Fix IT(1st DNS)>" custom_dns1
+    printf "${GREEN}
+${header}
+#
+# DNS Server 1: $custom_dns1
+# DNS Server 2:
+#
+"
+    clear
+    read -p "# $ WRN Fix IT(2nd DNS)>" custom_dns2
+    printf "${GREEN}
+${header}
+#
+# DNS Server 1: $custom_dns1
+# DNS Server 2: $custom_dns2
+#
+"
+    set_custom_dns
+}
+
 dns_changer() {
     clear
     printf "${GREEN}
 ${header}
-# =====================================
 #
 # Default / DHCP ............. [0]
 # Google DNS ................. [1]
@@ -182,27 +298,33 @@ ${header}
 # Quad9 DNS .................. [5]
 # Verisign DNS ............... [6]
 # OpenDNS .................... [7]
-# Back ....................... [8] (enter)
+# AdGuard DNS ................ [8]
+# Custom DNS ................. [9]
+# Back ....................... [10] (enter)
 #
 "
     read -p "# $ WRN Fix IT>" change_dns
-    if  [ $change_dns == "0" ]; then
+    if  [[ $change_dns == "0" ]]; then
         set_default_config
-    elif [ $change_dns == "1" ]; then
+    elif [[ $change_dns == "1" ]]; then
         set_google
-    elif [ $change_dns == "2" ]; then
+    elif [[ $change_dns == "2" ]]; then
         set_cloudflare
-    elif [ $change_dns == "3" ]; then
+    elif [[ $change_dns == "3" ]]; then
         set_freenom
-    elif [ $change_dns == "4" ]; then
+    elif [[ $change_dns == "4" ]]; then
         set_comodo
-    elif [ $change_dns == "5" ]; then
+    elif [[ $change_dns == "5" ]]; then
         set_quad9
-    elif [ $change_dns == "6" ]; then
+    elif [[ $change_dns == "6" ]]; then
         set_verisign
-    elif [ $change_dns == "7" ]; then
+    elif [[ $change_dns == "7" ]]; then
         set_opendns
-    elif [ $change_dns == "8" ]; then
+    elif [[ $change_dns == "8" ]]; then
+        adguard_choice
+    elif [[ $change_dns == "9" ]]; then
+        custom_dns_input
+    elif [[ $change_dns == "10" ]]; then
         dns_settings
     else
         menu
@@ -227,11 +349,11 @@ ${header}
 #
 "
     read -p "# $ WRN Fix IT> " donate_choice
-    if [ $donate_choice == "1" ]; then
+    if [[ $donate_choice == "1" ]]; then
         xdg-open "https://wrngnz.ga/bmc"
-    elif [ $donate_choice == "2" ]; then
+    elif [[ $donate_choice == "2" ]]; then
         xdg-open "https://wrngnz.ga/paypal"
-    elif [ $donate_choice == "3" ]; then
+    elif [[ $donate_choice == "3" ]]; then
         menu
     else
         menu
@@ -252,13 +374,13 @@ ${header}
 #
 "
     read -p "# $ WRN Fix IT> " opt
-    if [ $opt == "1" ]; then
+    if [[ $opt == "1" ]]; then
         dns_settings
-    elif [ $opt == "2" ]; then
+    elif [[ $opt == "2" ]]; then
         menu
-    elif [ $opt == "3" ]; then
+    elif [[ $opt == "3" ]]; then
         donate
-    elif [ $opt == "4" ]; then
+    elif [[ $opt == "4" ]]; then
         exit
     else
         menu
