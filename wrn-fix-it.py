@@ -17,6 +17,8 @@ def clear():
         system("clear")
 
 def err3():
+
+    clear()
     print("Error 3")
     print(f"# {divider}")
     print(f"# {appname} v{appvers} - {appstat}")
@@ -166,7 +168,7 @@ def t001():
             t001_d2 = "208.67.220.220"
             t001_1(t001_d0, t001_d1, t001_d2)
             break
-        elif user_input == "8":
+        elif user_input == "8" or user_input == "":
             tools_menu()
             break
         else:
@@ -192,7 +194,7 @@ def tools_menu():
         if user_input == "1":
             t001()
             break
-        elif user_input == "2":
+        elif user_input == "2" or user_input == "":
             main_menu()
             break
         else:
