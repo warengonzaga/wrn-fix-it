@@ -216,7 +216,6 @@ dns_settings() {
     clear
     printf "
 ${header}
-# =====================================
 #
 # DNS Server Changer ......... [1]
 # Back to Main Menu .......... [2] (enter)
@@ -235,7 +234,6 @@ ${header}
 adguard_choice() {
     printf "
 ${header}
-# =====================================
 #
 # Default .................... [0]
 # Family Protection .......... [1]
@@ -261,6 +259,7 @@ custom_dns_input() {
     clear
     printf "${GREEN}
 ${header}
+#
 # Custom DNS
 # If don't have a second DNS Server just press (enter)
 #
@@ -269,7 +268,7 @@ ${header}
     read -p "# $ WRN Fix IT(1st DNS)>" custom_dns1
     printf "${GREEN}
 ${header}
-# =====================================
+#
 # DNS Server 1: $custom_dns1
 # DNS Server 2:
 #
@@ -278,7 +277,7 @@ ${header}
     read -p "# $ WRN Fix IT(2nd DNS)>" custom_dns2
     printf "${GREEN}
 ${header}
-# =====================================
+#
 # DNS Server 1: $custom_dns1
 # DNS Server 2: $custom_dns2
 #
@@ -290,7 +289,6 @@ dns_changer() {
     clear
     printf "${GREEN}
 ${header}
-# =====================================
 #
 # Default / DHCP ............. [0]
 # Google DNS ................. [1]
