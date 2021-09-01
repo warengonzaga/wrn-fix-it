@@ -1,6 +1,7 @@
 from os import system, name
 import sys
 import ctypes
+import re
 
 appname = "WRN Fix IT"
 appvers = "1.0.0-rc.2"
@@ -134,6 +135,28 @@ def t001_1(t001_d0 = "1", t001_d1 = None, t001_d2 = None):
         t001_1_linux(t001_d0, t001_d1, t001_d2)
 
 
+def check_dns_format(address):
+    """Check the validity of an inputted DNS address.
+       Warn the user and ask to continue if the DNS address
+       is not in a recognizable format."""
+  
+    # Regex to check the format of DNS address for safety
+    dns_regex = re.compile(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$')
+    if not dns_regex.match(address):
+        print(f"# WARNING:")
+        print(f"# The DNS address above does not match the") 
+        print(f"# standard DNS address format.")
+        print(f"#")
+        print(f"# Continue? (Y/N)")
+        user_input = input("dnsNotRecognized=# > ")
+        if user_input.lower() == "y":
+            return True
+        else:
+            return False
+
+    return True
+
+
 def t001():
     """Make the user select the DNS server to change into."""
 
@@ -262,7 +285,65 @@ def t001():
 
         elif user_input == "9":
             # Custom DNS
-            pass
+            clear()
+            print(f"# {divider}")
+            print(f"# {appname} v{appvers} - {appstat}")
+            print(f"# by {dev}")
+            print(f"# {divider}")
+            print(f"#")
+
+            t001_d0 = "0"
+            t001_d1 = ""
+            t001_d2 = ""
+
+            # Primary DNS address
+            while True:
+                print(f"# Type the primary DNS address:")
+                print(f"# (Type q or enter without input to exit)")
+                user_input = input("customDNS1=# > ")
+
+                if user_input.lower() == "q" or user_input == "":
+                    t001()
+                    break
+
+                # If the user types an unrecognizable DNS address,
+                # confirm if that's what they really want
+                exit_custom_dns = not check_dns_format(user_input)
+
+                # If successfully gotten a primary DNS address,
+                # assign it to t001_d1
+                if not exit_custom_dns:
+                    t001_d1 = user_input
+                    break
+
+            # If the primary DNS address remains blank,
+            # that means the program should go back to the
+            # tool selection
+            if t001_d1 == "":
+                t001()
+                break
+
+            # Secondary DNS address
+            while True:
+                print(f"# Type the secondary DNS address:")
+                print(f"# (Type q or enter without input to exit)")
+                user_input = input("customDNS2=# > ")
+
+                if user_input.lower() == "q" or user_input == "":
+                    t001()
+                    break
+
+                # If the user types an unrecognizable DNS address,
+                # confirm if that's what they really want
+                exit_custom_dns = not check_dns_format(user_input)
+
+                # If successfully gotten a secondary DNS address,
+                # assign it to t001_d2 and start the DNS reassignment
+                if not exit_custom_dns:
+                    t001_d2 = user_input
+                    t001_1(t001_d0, t001_d1, t001_d2)
+                    break
+            break
         elif user_input == "10" or user_input == "":
             # Go back to tools menu
             tools_menu()
