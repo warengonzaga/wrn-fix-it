@@ -59,13 +59,13 @@ If you're facing a problem in using WRN Fix IT please let us know by [creating a
 
 ## 🌏 Community
 
-Wanna become one of us? Join today and contribute!
-
-[![Community](https://discordapp.com/api/guilds/694612151444439081/widget.png?style=banner3)](https://wareneutron.com/discord)
-
 Looking for community of Filipino tech enthusiasts?
 
-[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner2)](https://wrngnzga.com/discord)
+[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner3)](https://wrngnz.ga/discord)
+
+Wanna contribute to my projects? Join today and contribute!
+
+[![Community](https://discordapp.com/api/guilds/694612151444439081/widget.png?style=banner2)](https://wareneutron.com/discord)
 
 ## 📋 Code of Conduct
 
@@ -77,11 +77,11 @@ WRN Fix IT is licensed under [GNU General Public License v3](https://opensource.
 
 ## 📝 Author
 
-WRN Fix IT is created by **[Waren Gonzaga](https://github.com/warengonzaga)**, with the help of awesome [contributors](https://github.com/wareneutron/covid19-tracker-cli/graphs/contributors).
+WRN Fix IT is created by **[Waren Gonzaga](https://github.com/warengonzaga)**, with the help of awesome [contributors](https://github.com/warengonzaga/wrn-fix-it/graphs/contributors).
 
 ---
 
-💻 Made with 💖 and ☕ by [Waren Gonzaga](https://warengonzaga.com) with **YHWH** 🙏 | Citizen of Heaven
+💻 Made with 💖 and ☕ by **Waren Gonzaga** with **YHWH** 🙏 | Citizen of Heaven
 
 [personal website]: https://warengonzaga.com
 [business website]: https://wgcompanyhq.com
