@@ -328,8 +328,53 @@ def main_menu():
             print("Invalid input. Please try again.")
             continue
 
+def is_admin():
+    """Return True if the program has admin privileges"""
+
+    # Windows
+    if name == 'nt':
+        print("Administrative permissions required. Detecting permissions.")
+        system('ping localhost -n 2 >NUL')
+        system('cls')
+        print("Administrative permissions required. Detecting permissions..")
+        system('ping localhost -n 2 >NUL')
+        system('cls')
+        print("Administrative permissions required. Detecting permissions...")
+        system('ping localhost -n 2 >NUL')
+        system('cls')
+        system('net session >nul 2>&1')
+
+        error_level = system('%errorLevel%')
+
+        if error_level == 0:
+            return True
+        else:
+            return False
+
+    # Linux
+    else:
+        return system('[ "$EUID" == 0 ]') == 0
+
 def main():
+    if not is_admin():
+        print(f"# {divider}")
+        print(f"# {appname} v{appvers} - {appstat}")
+        print(f"# by {dev}")
+        print(f"# {divider}")
+        print(f"# ERROR * ERROR * ERROR * ERROR * ERROR * ERROR")
+        print(f"#")
+        print(f"# Current user permissions to execute this .py file are inadequate.")
+        print(f"# This .py file must be run with administrative privileges.")
+        print(f"# Close this program and run it as administrator.")
+        print(f"# Contact the developer to assist you...")
+        print(f"#")
+        print(f"# ERROR * ERROR * ERROR * ERROR * ERROR * ERROR")
+        print(f"Press Enter to exit the program...")
+        input()
+        return 4
+
     main_menu()
+    return 0
 
 if __name__ == '__main__':
     main()
