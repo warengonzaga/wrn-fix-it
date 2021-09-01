@@ -1,5 +1,6 @@
 from os import system, name
 import sys
+import ctypes
 
 appname = "WRN Fix IT"
 appvers = "1.0.0-rc.2"
@@ -333,23 +334,7 @@ def is_admin():
 
     # Windows
     if name == 'nt':
-        print("Administrative permissions required. Detecting permissions.")
-        system('ping localhost -n 2 >NUL')
-        system('cls')
-        print("Administrative permissions required. Detecting permissions..")
-        system('ping localhost -n 2 >NUL')
-        system('cls')
-        print("Administrative permissions required. Detecting permissions...")
-        system('ping localhost -n 2 >NUL')
-        system('cls')
-        system('net session >nul 2>&1')
-
-        error_level = system('%errorLevel%')
-
-        if error_level == 0:
-            return True
-        else:
-            return False
+        return ctypes.windll.shell32.IsUserAnAdmin() != 0
 
     # Linux
     else:
