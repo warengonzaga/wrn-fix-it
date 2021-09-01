@@ -53,7 +53,7 @@ If you're facing a problem in using WRN Fix IT please let us know by [creating a
 [![BuyMeaCoffee](https://wrngnz.ga/badge-buymeacoffee)](https://buymeacoff.ee/warengonzaga) [![Vercel](https://wrngnz.ga/badge-vercel)](https://vercel.com) [![CircleCI](https://wrngnz.ga/badge-circleci)](https://vercel.com) [![GitBook](https://wrngnz.ga/badge-gitbook)](https://gitbook.io) [![Digital Ocean](https://wrngnz.ga/badge-digitalocean)](https://digitalocean.com) [![Deepware](https://wrngnz.ga/badge-deepware)](https://deepware.ai/) [![NOWPayments](https://wrngnz.ga/badge-nowpayments)](https://nowpayments.io) [![StackHawk](https://img.shields.io/badge/Stackhawk-%2300CBC6.svg?&style=for-the-badge&logoColor=white)](https://stackhawk.com)
 
 <!-- markdownlint-disable MD033 -->
-> Love what I do? **[Send us some coffees](https://buymeacoff.ee/wareneutron)**!<br/>
+> Love what I do? **[Send me some coffees](https://buymeacoff.ee/wareneutron)**!<br/>
 > Your coffee donation and support will help me to continue working on open-source projects like this.
 <!-- markdownlint-disable MD033 -->
 
