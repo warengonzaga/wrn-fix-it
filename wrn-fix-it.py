@@ -151,7 +151,9 @@ def t001():
     print(f"# Quad9 DNS .................. [5]")
     print(f"# Verisign DNS ............... [6]")
     print(f"# OpenDNS .................... [7]")
-    print(f"# Back ....................... [8] (enter)")
+    print(f"# AdGuard (more).............. [8]")
+    print(f"# Custom ..................... [9]")
+    print(f"# Back ....................... [10] (enter)")
     print(f"#")
 
     while True:
@@ -211,7 +213,14 @@ def t001():
             t001_d2 = "208.67.220.220"
             t001_1(t001_d0, t001_d1, t001_d2)
             break
-        elif user_input == "8" or user_input == "":
+        elif user_input == "8":
+            # AdGuard DNS
+            pass
+        elif user_input == "9":
+            # Custom DNS
+            pass
+        elif user_input == "10" or user_input == "":
+            # Go back to tools menu
             tools_menu()
             break
         else:
