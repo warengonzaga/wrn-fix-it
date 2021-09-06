@@ -12,7 +12,7 @@ Your open-source companion toolset for fixing common technical issues. This will
 
 <!-- <!-- markdownlint-disable MD033 -->
 The complete documentation can be found here:<br/>
-[![Docs](https://img.shields.io/badge/Docs-docs.wareneutron.com/wrn--fix--it-blue.svg?longCache=true&style=for-the-badge)](https://docs.warengonzaga.com/wrn-fix-it)
+[![Docs](https://img.shields.io/badge/Docs-docs.warengonzaga.com/wrn--fix--it-blue.svg?longCache=true&style=for-the-badge)](https://docs.warengonzaga.com/wrn-fix-it)
 <!-- <!-- markdownlint-enable MD033 -->
 
 ## ⚡ Features
