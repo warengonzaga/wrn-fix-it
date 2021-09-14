@@ -1,6 +1,6 @@
-# WRN Fix IT (Release Candidate)
+# WRN Fix IT
 
-[![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![discord](https://img.shields.io/discord/659684980137656340?color=%235865F2&label=discord&logo=discord&logoColor=white&style=flat-square)](https://wrngnz.ga/discord) [![release](https://img.shields.io/github/release/warengonzaga/wrn-fix-it.svg?style=flat-square)](https://github.com/warengonzaga/wrn-fix-it/releases) [![star](https://img.shields.io/github/stars/warengonzaga/wrn-fix-it.svg?style=flat-square)](https://github.com/warengonzaga/wrn-fix-it/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/wrn-fix-it.svg?style=flat-square)](https://github.com/warengonzaga/wrn-fix-it/blob/main/LICENSE)
+[![created by](https://img.shields.io/badge/created%20by-Waren%20Gonzaga-blue.svg?longCache=true&style=flat-square)](https://github.com/warengonzaga) [![discord](https://img.shields.io/discord/659684980137656340?color=%235865F2&label=discord&logo=discord&logoColor=white&style=flat-square)](https://wrngnz.ga/discord) [![release](https://img.shields.io/github/release/warengonzaga/wrn-fix-it.svg?style=flat-square)](https://github.com/warengonzaga/wrn-fix-it/releases) [![star](https://img.shields.io/github/stars/warengonzaga/wrn-fix-it.svg?style=flat-square)](https://github.com/warengonzaga/wrn-fix-it/stargazers) [![license](https://img.shields.io/github/license/warengonzaga/wrn-fix-it.svg?style=flat-square)](https://github.com/warengonzaga/wrn-fix-it/blob/main/license)
 
 Your open-source companion toolset for fixing common technical issues. This will help you to make your life easier in fixing most common issues with different operating systems.
 
@@ -64,13 +64,9 @@ If you're facing a problem in using WRN Fix IT please let me know by [creating a
 
 ## 🌏 Community
 
-Looking for community of Filipino tech enthusiasts?
+Join to my growing tech community and get the latest updates!
 
-[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner3)](https://wrngnz.ga/discord)
-
-Wanna contribute to my projects? Join today and contribute!
-
-[![Community](https://discordapp.com/api/guilds/694612151444439081/widget.png?style=banner2)](https://wareneutron.com/discord)
+[![Community](https://discordapp.com/api/guilds/659684980137656340/widget.png?style=banner2)](https://wrngnz.ga/discord) [![Community](https://discordapp.com/api/guilds/694612151444439081/widget.png?style=banner2)](https://wareneutron.com/discord)
 
 ## 📋 Code of Conduct
 
