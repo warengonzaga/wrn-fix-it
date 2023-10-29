@@ -46,7 +46,7 @@ For any questions, suggestions, ideas, or simply you want to share your experien
 
 Contributions are welcome, create a pull request to this repo and I will review your code. Please consider to submit your pull request to the `dev` branch. Thank you!
 
-Read the project's [contributing guide](./CONTRIBUTING.md) for more info.
+Read the project's [contributing guide](./contributing.md) for more info.
 
 ## 🐛 Issues
 
