@@ -1,8 +1,8 @@
 {
   "name": "wrn-fix-it",
   "appname": "WRN Fix IT",
-  "version": "1.0.0-rc.2",
-  "status": "Release Candidate",
+  "version": "1.0.0",
+  "status": "Alpha",
   "description": "Your Windows companion toolset for fixing common issues",
   "main": "gulpfile.js",
   "scripts": {

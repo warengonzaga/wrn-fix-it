@@ -256,12 +256,12 @@ echo # Please consider to buy me a coffee or
 echo # just donate to keep this project alive.
 echo #
 echo # Buy Me A Coffee ............ [1]
-echo # PayPal ..................... [2]
+echo # GitHub Sponsors ............ [2]
 echo # Back to Main Menu .......... [3] (enter)
 echo #
 set /p "donate=# %cliname%> " || set donate=3
 if %donate%==1 goto buymeacoffee
-if %donate%==2 goto paypal
+if %donate%==2 goto sponsors
 if %donate%==3 goto mainMenu
 goto err2
 pause>null
@@ -274,10 +274,10 @@ start https://buymeacoff.ee/warengonzaga
 goto donate
 
 rem =============================
-rem Donation: PayPal
+rem Donation: GitHub Sponsors
 rem =============================
-:paypal
-start https://paypal.me/warengonzagaofficial
+:sponsors
+start https://github.com/sponsors/warengonzaga
 goto donate
 
 rem =============================

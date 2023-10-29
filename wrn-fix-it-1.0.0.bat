@@ -1,10 +1,10 @@
 rem =============================
 rem WRN Fix IT - https://github.com/warengonzaga/wrn-fix-it#readme
 rem Your Windows companion toolset for fixing common issues
-rem Version: 1.0.0-rc.2
+rem Version: 1.0.0
 rem Github: https://github.com/warengonzaga/wrn-fix-it
 rem Licensed under GPL v3 - https://opensource.org/licenses/GPL-3.0
-rem Copyright (c) 2021 Waren Gonzaga
+rem Copyright (c) 2023 Waren Gonzaga
 rem 
 rem Facebook: @warengonzagaofficial
 rem Twitter: @warengonzaga
@@ -21,8 +21,8 @@ rem =============================
 rem Setup Variables
 rem =============================
 set appname=WRN Fix IT
-set appvers=1.0.0-rc.2
-set appstat=Release Candidate
+set appvers=1.0.0
+set appstat=Alpha
 set dev=Waren Gonzaga
 set desc=Your Windows companion toolset for fixing common issues
 set uicolor=a
@@ -287,12 +287,12 @@ echo # Please consider to buy me a coffee or
 echo # just donate to keep this project alive.
 echo #
 echo # Buy Me A Coffee ............ [1]
-echo # PayPal ..................... [2]
+echo # GitHub Sponsors ............ [2]
 echo # Back to Main Menu .......... [3] (enter)
 echo #
 set /p "donate=# %cliname%> " || set donate=3
 if %donate%==1 goto buymeacoffee
-if %donate%==2 goto paypal
+if %donate%==2 goto sponsors
 if %donate%==3 goto mainMenu
 goto err2
 pause>null
@@ -305,10 +305,10 @@ start https://buymeacoff.ee/warengonzaga
 goto donate
 
 rem =============================
-rem Donation: PayPal
+rem Donation: GitHub Sponsors
 rem =============================
-:paypal
-start https://paypal.me/warengonzagaofficial
+:sponsors
+start https://github.com/sponsors/warengonzaga
 goto donate
 
 rem =============================
