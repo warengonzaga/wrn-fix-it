@@ -4,13 +4,6 @@
 
 Your open-source companion toolset for fixing common technical issues. This will help you to make your life easier in fixing most common issues with different operating systems.
 
-## 📖 Documentation
-
-<!-- <!-- markdownlint-disable MD033 -->
-The complete documentation can be found here:<br/>
-[![Docs](https://img.shields.io/badge/Docs-docs.warengonzaga.com/wrn--fix--it-blue.svg?longCache=true&style=for-the-badge)](https://docs.warengonzaga.com/wrn-fix-it)
-<!-- <!-- markdownlint-enable MD033 -->
-
 ## ⚡ Features
 
 - Tools
